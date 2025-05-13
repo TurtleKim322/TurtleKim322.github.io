@@ -121,7 +121,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: "https://github.com/TurtleKim322"
+      # url: "https://github.com/TurtleKim322"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
