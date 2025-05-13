@@ -113,15 +113,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Kim DongHwan"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "백엔드 개발자이자 위성 데이터와 알고리즘에 관심 있는 개발자입니다."
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+       url: "https://github.com/TurtleKim322"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
