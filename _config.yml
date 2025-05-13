@@ -118,6 +118,7 @@ author:
   bio              : "백엔드 개발자이자 위성 데이터와 알고리즘에 관심 있는 개발자입니다."
   location         : "South Korea"
   email            : "TurtleKim322@gmail.com"
+  github           : "https://github.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -133,7 +134,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/"
+       #url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
