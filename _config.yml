@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "거북이 쉽터"
-title_separator          : "-"
+title_separator          : "|"
 subtitle                 : "알고리즘, 백엔드, 위성데이터, SAR"
 name                     : "Kim DongHwan"
 description              : "개발자 거북이의 기술 블로그 - 알고리즘, 백엔드, 위성데이터 등 다양한 개발 지식을 다룹니다."
