@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "거북이 쉽터"
+title                    : "거북이 쉼터"
 title_separator          : "|"
 subtitle                 : "알고리즘, 백엔드, 위성데이터, SAR"
 name                     : "Kim DongHwan"
