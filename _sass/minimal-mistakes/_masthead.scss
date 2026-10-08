@@ -102,6 +102,7 @@
 }
 
 .masthead-tools .site-search {
+  flex: 0 0 1.9em;
   width: 14em;
   margin: 0;
 }
@@ -130,7 +131,7 @@
   }
 
   .masthead-tools .site-search {
-    flex-basis: 10em;
+    flex-basis: 1.9em;
     width: 10em;
   }
 }
