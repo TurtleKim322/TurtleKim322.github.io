@@ -1,0 +1,15 @@
+{% assign locale = include.locale | default: site.locale %}
+{% assign categories_sorted = site.categories | sort %}
+<nav class="category-sidebar" aria-label="Categories">
+  <h3 class="nav__title"><i class="fas fa-folder-open" aria-hidden="true"></i> 카테고리</h3>
+  <ul>
+    {% for category in categories_sorted %}
+      {% assign category_name = category[0] %}
+      <li>
+        <a href="{{ '/categories/' | relative_url }}#{{ category_name | slugify }}">{{ category_name | escape }}</a>
+        <span class="category-sidebar__count">{{ category[1].size }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <a class="category-sidebar__all" href="{{ '/categories/' | relative_url }}">전체 카테고리 보기</a>
+</nav>

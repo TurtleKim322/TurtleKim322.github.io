@@ -57,6 +57,42 @@
   font-size: $type-size-8;
 }
 
+.site-search {
+  display: flex;
+  align-items: center;
+  flex: 0 1 15em;
+  margin-inline-start: 1em;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background: $background-color;
+
+  input {
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.45em 0.65em;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  button {
+    flex: 0 0 auto;
+    padding: 0.45em 0.7em;
+    border: 0;
+    color: $muted-text-color;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-search {
+    flex-basis: 10em;
+    margin-inline-start: 0.5em;
+  }
+}
+
 .masthead__menu {
   float: inline-start;
   margin-inline: 0;
