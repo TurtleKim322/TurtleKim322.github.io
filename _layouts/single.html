@@ -38,7 +38,7 @@ layout: default
           {% if page.id %}
             <div class="post-view-count" aria-label="게시물 조회수">
               <span>이 글 조회수</span>
-              <div class="counterapi" ns="turtlekim322.github.io" action="view" key="post-{{ page.slug | default: page.id | slugify }}" label="조회" noLink="true" style="min-height: 30px"></div>
+              <div class="counterapi" ns="turtlekim322.github.io" action="view" key="post-{{ page.slug | default: page.id | slugify }}" label="조회" noIcon="true" noCss="true" noLink="true"></div>
             </div>
           {% endif %}
         </header>
