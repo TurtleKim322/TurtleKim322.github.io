@@ -1,0 +1,14 @@
+{% assign tags_sorted = site.tags | sort %}
+<nav class="tag-sidebar" aria-label="태그">
+  <h3 class="nav__title">태그</h3>
+  <ul>
+    {% for tag in tags_sorted limit: 12 %}
+      {% assign tag_name = tag[0] %}
+      <li>
+        <a href="{{ '/tags/' | relative_url }}#{{ tag_name | slugify }}">{{ tag_name | escape }}</a>
+        <span class="category-sidebar__count">{{ tag[1].size }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <a class="category-sidebar__all" href="{{ '/tags/' | relative_url }}">전체 태그 보기</a>
+</nav>

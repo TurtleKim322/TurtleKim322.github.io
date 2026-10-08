@@ -15,14 +15,14 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html locale=locale %}
-
-  <div class="archive">
-    {% if site.show_category_sidebar %}<aside class="sidebar__right sticky">{% include category-sidebar.html locale=locale %}</aside>{% endif %}
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
+<div id="main" class="blog-layout" role="main">
+  <div class="blog-layout__content">
+    <div class="archive">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
+      {% endunless %}
+      {{ content }}
+    </div>
   </div>
+  <aside class="blog-layout__sidebar">{% include blog-sidebar.html locale=locale %}</aside>
 </div>

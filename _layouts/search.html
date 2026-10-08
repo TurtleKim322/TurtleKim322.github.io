@@ -13,19 +13,17 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html locale=locale %}
+<div id="main" class="blog-layout" role="main">
+  <div class="blog-layout__content">
+    <div class="archive">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
+      {% endunless %}
 
-  <div class="archive">
-    {% if site.show_category_sidebar %}<aside class="sidebar__right sticky">{% include category-sidebar.html locale=locale %}</aside>{% endif %}
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-    {% endunless %}
+      {{ content }}
 
-    {{ content }}
-
-    {%- assign search_provider = site.search_provider | default: "lunr" -%}
-    {%- case search_provider -%}
+      {%- assign search_provider = site.search_provider | default: "lunr" -%}
+      {%- case search_provider -%}
       {%- when "lunr" -%}
         <label class="sr-only" for="search">블로그 검색어</label>
         <input type="text" id="search" class="search-input" placeholder="검색어 입력" />
@@ -50,6 +48,8 @@ layout: default
       {%- when "algolia" -%}
         <div class="search-searchbar"></div>
         <div class="search-hits"></div>
-    {%- endcase -%}
+      {%- endcase -%}
+    </div>
   </div>
+  <aside class="blog-layout__sidebar">{% include blog-sidebar.html locale=locale %}</aside>
 </div>

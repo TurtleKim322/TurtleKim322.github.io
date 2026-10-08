@@ -60,13 +60,14 @@
 .site-search {
   display: flex;
   align-items: center;
-  flex: 0 0 12em;
-  height: 2.5em;
+  flex: 0 0 14em;
+  height: 1.9em;
   margin: 0 0 0 0.75em;
   padding: 0;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  background: $background-color;
+  border: 0;
+  border-bottom: 2px solid $text-color;
+  border-radius: 0;
+  background: transparent;
 
   input {
     min-width: 0;
@@ -92,7 +93,7 @@
 
 @media (max-width: 600px) {
   .site-search {
-    flex-basis: 9em;
+    flex-basis: 10em;
     margin-inline-start: 0.4em;
   }
 }

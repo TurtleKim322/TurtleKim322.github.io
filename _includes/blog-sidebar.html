@@ -1,0 +1,14 @@
+<section class="blog-sidebar" aria-label="블로그 정보와 분류">
+  <div class="blog-profile-card">
+    <div class="blog-profile-card__avatar" aria-hidden="true">🐢</div>
+    <h2>{{ site.title | escape }}</h2>
+    {% if site.author.name %}<p class="blog-profile-card__name">{{ site.author.name | escape }}</p>{% endif %}
+    {% if site.author.bio %}<p class="blog-profile-card__bio">{{ site.author.bio | markdownify | strip_html | strip }}</p>{% endif %}
+    <div class="blog-profile-card__actions">
+      {% if site.author.email %}<a class="blog-profile-card__button blog-profile-card__button--primary" href="mailto:{{ site.author.email }}">이메일</a>{% endif %}
+      <a class="blog-profile-card__button" href="{{ '/insar-seoul/series/' | relative_url }}">블로그 글</a>
+    </div>
+  </div>
+  {% include category-sidebar.html locale=include.locale %}
+  {% include tag-sidebar.html locale=include.locale %}
+</section>
