@@ -43,6 +43,11 @@
     float: none;
     width: auto;
     padding: 0;
+
+    header {
+      display: flow-root;
+      width: 100%;
+    }
   }
 
   .archive__subtitle {
@@ -132,11 +137,23 @@
 
 .post-view-count {
   display: flex;
+  position: static;
+  float: none;
+  clear: both;
+  width: 100%;
+  min-width: 100%;
   align-items: center;
   gap: 0.55em;
-  margin: 1.5em 0;
+  box-sizing: border-box;
+  margin: 0.6em 0 1.25em;
   color: $muted-text-color;
   font-size: $type-size-7;
+  white-space: nowrap;
+
+  > span,
+  .counterapi {
+    flex: 0 0 auto;
+  }
 }
 
 .comments-provider-note {
