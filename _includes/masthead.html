@@ -23,6 +23,7 @@
             </li>
           {%- endfor -%}
         </ul>
+        <div class="masthead-tools">
         {% if site.search == true %}
         <form class="site-search" action="{{ '/search/' | relative_url }}" method="get" role="search">
           <label class="visually-hidden" for="site-search-input">블로그 검색</label>
@@ -30,6 +31,11 @@
           <button type="submit" aria-label="검색"><i class="fas fa-search" aria-hidden="true"></i></button>
         </form>
         {% endif %}
+        <div class="site-visitor-count" aria-label="전체 방문자 수">
+          <span>전체 방문자</span>
+          <div class="counterapi" ns="turtlekim322.github.io" action="view" key="any" unique="true" label="명" noIcon="true" noCss="true" noLink="true"></div>
+        </div>
+        </div>
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
