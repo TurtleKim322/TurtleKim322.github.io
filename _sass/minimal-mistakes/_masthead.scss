@@ -91,45 +91,10 @@
   }
 }
 
-.masthead-tools {
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-inline-start: 0.75em;
-}
-
-.masthead-tools .site-search {
-  width: 14em;
-  margin: 0;
-}
-
-.site-visitor-count {
-  display: flex;
-  align-items: baseline;
-  gap: 0.35em;
-  min-height: 1.4em;
-  margin-top: 0.2em;
-  color: $muted-text-color;
-  font-size: $type-size-7;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.site-visitor-count .counterapi {
-  min-height: 0 !important;
-  color: inherit;
-  font: inherit;
-}
-
 @media (max-width: 600px) {
-  .masthead-tools {
-    margin-inline-start: 0.4em;
-  }
-
-  .masthead-tools .site-search {
+  .site-search {
     flex-basis: 10em;
-    width: 10em;
+    margin-inline-start: 0.4em;
   }
 }
 
