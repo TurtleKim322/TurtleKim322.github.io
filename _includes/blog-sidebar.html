@@ -1,4 +1,4 @@
-<section class="blog-sidebar" aria-label="블로그 정보와 분류">
+<section class="blog-sidebar" aria-label="블로그 프로필">
   <div class="blog-profile-card">
     <div class="blog-profile-card__avatar" aria-hidden="true">🐢</div>
     <h2>{{ site.title | escape }}</h2>
@@ -9,6 +9,8 @@
       <a class="blog-profile-card__button" href="{{ '/insar-seoul/series/' | relative_url }}">블로그 글</a>
     </div>
   </div>
-  {% include category-sidebar.html locale=include.locale %}
-  {% include tag-sidebar.html locale=include.locale %}
+  {% if include.show_taxonomy != false %}
+    {% include category-sidebar.html locale=include.locale %}
+    {% include tag-sidebar.html locale=include.locale %}
+  {% endif %}
 </section>

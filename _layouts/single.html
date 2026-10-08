@@ -69,7 +69,7 @@ layout: default
   </article>
 
   <aside class="blog-layout__sidebar">
-    {% include blog-sidebar.html locale=locale %}
+    {% include blog-sidebar.html locale=locale show_taxonomy=false %}
     {% if page.toc %}
       <nav class="toc blog-layout__toc" aria-label="Table of contents">
         <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[locale].toc_label | default: "On this page" }}</h4></header>

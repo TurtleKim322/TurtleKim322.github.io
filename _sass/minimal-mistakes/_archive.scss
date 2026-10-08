@@ -19,7 +19,10 @@
   }
 }
 
-.blog-layout {
+#main.blog-layout {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-top: 2.25em;
   display: grid;
   grid-template-columns: minmax(0, 2.05fr) minmax(250px, 0.95fr);
   align-items: start;
@@ -43,28 +46,80 @@
   }
 
   .archive__subtitle {
-    margin: 2.25em 0 0.75em;
+    margin: 0 0 0.75em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid $border-color;
     font-size: $type-size-5;
   }
 
+  .list__item {
+    margin: 0;
+    padding: 1.35em 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .list__item .page__meta {
+    margin-bottom: 0.45em;
+    font-size: $type-size-7;
+  }
+
   .archive__item-title {
+    margin: 0 0 0.4em;
     font-size: 1.1em;
     line-height: 1.4;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   .archive__item-excerpt {
+    margin: 0;
     font-size: $type-size-6;
+    line-height: 1.65;
+  }
+
+  .page__title {
+    margin-bottom: 0.65em;
+    font-size: 1.8em;
+    line-height: 1.35;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .page__content {
+    line-height: 1.8;
+
+    h2 {
+      margin-top: 2em;
+      font-size: 1.4em;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+      font-size: 1.15em;
+    }
+
+    p {
+      margin-bottom: 1.15em;
+    }
   }
 }
 
 .blog-layout__sidebar {
   min-width: 0;
-  padding-top: 1em;
+  padding-top: 0.8em;
 }
 
 .blog-profile-card {
   margin-bottom: 2em;
-  padding: 1.75em 1.25em;
+  padding: 1.75em 1.25em 1.5em;
   text-align: center;
   border: 1px solid $border-color;
   background: $background-color;
@@ -131,6 +186,8 @@
 
   .nav__title {
     margin-top: 0;
+    margin-bottom: 0.8em;
+    font-size: $type-size-5;
   }
 
   ul {
@@ -163,12 +220,19 @@
   .blog-layout {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 1.5em;
+    padding-top: 1.25em;
   }
 
   .blog-layout__sidebar {
     grid-row: 2;
     padding-top: 0;
   }
+}
+
+.blog-layout__toc {
+  margin-top: 1.5em;
+  padding-top: 1.25em;
+  border-top: 1px solid $border-color;
 }
 
 .archive__item {

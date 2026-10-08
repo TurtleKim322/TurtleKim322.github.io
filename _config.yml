@@ -15,14 +15,14 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise","default", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 
 direction                : # "ltr" (default), "rtl" # set the direction of the page
 title                    : "거북이 쉼터"
 title_separator          : "|"
-subtitle                 : "아무거나 하자"
+subtitle                 : "위성 영상 · 공간정보 · 일상 기록"
 name                     : "Kim DongHwan"
-description              : "An amazing website."
+description              : "위성 영상과 공간정보 분석 과정을 차근차근 기록합니다."
 url                      : "https://TurtleKim322.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -118,7 +118,7 @@ author:
   name             : "Kim DongHwan"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
 
-  bio              : "취미 공간"
+  bio              : "위성 영상과 공간정보를 차근차근 기록합니다."
   location         : "South Korea"
   email            : "TurtleKim322@gmail.com"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
