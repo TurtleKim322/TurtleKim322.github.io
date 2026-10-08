@@ -9,10 +9,6 @@
       <a class="blog-profile-card__button" href="{{ '/insar-seoul/series/' | relative_url }}">블로그 글</a>
     </div>
   </div>
-  <section class="blog-visitor-count" aria-label="전체 방문자 수">
-    <h3>전체 방문자</h3>
-    <div class="counterapi" ns="turtlekim322.github.io" action="view" key="any" unique="true" label="명" noLink="true" style="min-height: 30px"></div>
-  </section>
   {% if include.show_taxonomy != false %}
     {% include category-sidebar.html locale=include.locale %}
     {% include tag-sidebar.html locale=include.locale %}

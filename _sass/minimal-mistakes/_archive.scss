@@ -117,6 +117,33 @@
   padding-top: 0.8em;
 }
 
+.site-visitor-count {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.55em;
+  max-width: 1120px;
+  min-height: 2.5em;
+  margin: 0 auto;
+  padding: 0.25em 1em;
+  color: $muted-text-color;
+  font-size: $type-size-7;
+}
+
+.post-view-count {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  margin: 1.5em 0;
+  color: $muted-text-color;
+  font-size: $type-size-7;
+}
+
+.comments-provider-note {
+  color: $muted-text-color;
+  font-size: $type-size-7;
+}
+
 .blog-profile-card {
   margin-bottom: 2em;
   padding: 1.75em 1.25em 1.5em;

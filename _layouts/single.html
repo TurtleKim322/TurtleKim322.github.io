@@ -60,15 +60,8 @@ layout: default
       {% endif %}
     </div>
 
-    {% if site.comments.provider and page.comments %}
-      {% if jekyll.environment == 'production' %}
-        {% include comments.html locale=locale %}
-      {% else %}
-        <p>
-          Comments are configured with provider: <strong>{{ site.comments.provider }}</strong>,
-          but are disabled in non-production environments.
-        </p>
-      {% endif %}
+    {% if site.comments.provider %}
+      {% include comments.html locale=locale %}
     {% endif %}
   </article>
 
