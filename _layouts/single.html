@@ -35,13 +35,13 @@ layout: default
           </h1>
           {%- endif %}
           {% include page__meta.html locale=locale %}
-          {% if page.id %}
-            <div class="post-view-count" aria-label="게시물 조회수">
-              <span>이 글 조회수</span>
-              <div class="counterapi" ns="turtlekim322.github.io" action="view" key="post-{{ page.slug | default: page.id | slugify }}" label="조회" noIcon="true" noCss="true" noLink="true"></div>
-            </div>
-          {% endif %}
         </header>
+        {% if page.id %}
+          <div class="post-view-count" aria-label="게시물 조회수">
+            <span>이 글 조회수</span>
+            <div class="counterapi" ns="turtlekim322.github.io" action="view" key="post-{{ page.slug | default: page.id | slugify }}" label="조회" noIcon="true" noCss="true" noLink="true"></div>
+          </div>
+        {% endif %}
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
