@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #7 - 후보점과 patch 중복 검증"
 date: 2026-10-08
 permalink: /insar-seoul/07-candidates/
 categories: [기술]
-tags: [StaMPS, PS candidates, Patch, Python]
+tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---

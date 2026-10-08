@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #1 - 프로젝트 개요와 처리 환
 date: 2026-10-08
 permalink: /insar-seoul/01-overview/
 categories: [위성]
-tags: [Sentinel-1, SAR, InSAR, PS-InSAR, SNAP, StaMPS, Octave]
+tags: [Sentinel-1, SAR, InSAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 toc_sticky: true

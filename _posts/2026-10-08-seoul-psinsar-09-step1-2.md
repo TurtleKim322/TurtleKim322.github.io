@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #9 - StaMPS Step 1–2 진단 결과"
 date: 2026-10-08
 permalink: /insar-seoul/09-step1-2/
 categories: [기술]
-tags: [StaMPS, Step 1, Step 2, Coherence, Height]
+tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---

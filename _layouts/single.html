@@ -52,8 +52,12 @@ layout: default
       </footer>
 
       {% if page.share %}{% include social-share.html locale=locale %}{% endif %}
-
-      {% include post_pagination.html locale=locale %}
+      {% if page.id %}
+        <div class="post-view-count" aria-label="게시물 조회수">
+          <span>이 글 조회수</span>
+          <div class="counterapi" ns="turtlekim322.github.io" action="view" key="post-{{ page.slug | default: page.id | slugify }}" label="조회" noLink="true" style="min-height: 30px"></div>
+        </div>
+      {% endif %}
     </div>
 
     {% if site.comments.provider and page.comments %}
@@ -78,11 +82,4 @@ layout: default
     {% endif %}
   </aside>
 
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    {% include page__related.html locale=locale posts=site.related_posts %}
-  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
-  {% elsif page.id and page.related %}
-    {% include page__related.html locale=locale posts=site.posts %}
-  {% endif %}
 </div>

@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #2 - AOI와 IW/Burst 후보 범위"
 date: 2026-10-08
 permalink: /insar-seoul/02-aoi-burst/
 categories: [기술]
-tags: [Sentinel-1, IW, Burst, AOI, StaMPS]
+tags: [Sentinel-1, SAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---

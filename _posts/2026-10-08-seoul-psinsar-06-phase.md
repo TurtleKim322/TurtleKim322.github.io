@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #6 - 간섭 위상 점검"
 date: 2026-10-08
 permalink: /insar-seoul/06-interferogram/
 categories: [기술]
-tags: [Sentinel-1, Interferogram, Phase, StaMPS]
+tags: [Sentinel-1, InSAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---

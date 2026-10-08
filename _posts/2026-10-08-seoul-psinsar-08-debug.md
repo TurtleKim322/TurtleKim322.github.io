@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #8 - Octave와 C 처리 진단"
 date: 2026-10-08
 permalink: /insar-seoul/08-debug/
 categories: [기술]
-tags: [GNU Octave, StaMPS, C, WSL]
+tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---

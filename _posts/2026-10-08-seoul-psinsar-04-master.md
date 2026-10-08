@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #4 - 마스터 영상과 수직 기준
 date: 2026-10-08
 permalink: /insar-seoul/04-master/
 categories: [기술]
-tags: [Sentinel-1, Master, Baseline, PS-InSAR]
+tags: [Sentinel-1, InSAR, PS-InSAR]
 author_profile: true
 toc: true
 ---

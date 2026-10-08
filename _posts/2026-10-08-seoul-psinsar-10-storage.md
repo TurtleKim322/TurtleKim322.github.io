@@ -3,7 +3,7 @@ title: "서울 Sentinel-1 PS-InSAR 분석 #10 - 당시 WSL 저장 공간과 데�
 date: 2026-10-08
 permalink: /insar-seoul/10-storage/
 categories: [기술]
-tags: [WSL2, Storage, Sentinel-1, Data management]
+tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true
 ---
