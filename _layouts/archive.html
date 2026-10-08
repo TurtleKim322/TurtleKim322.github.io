@@ -19,7 +19,7 @@ layout: default
   {% include sidebar.html locale=locale %}
 
   <div class="archive">
-    {% if site.show_category_sidebar %}{% include category-sidebar.html locale=locale %}{% endif %}
+    {% if site.show_category_sidebar %}<aside class="sidebar__right sticky">{% include category-sidebar.html locale=locale %}</aside>{% endif %}
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
     {% endunless %}
