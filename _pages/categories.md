@@ -5,7 +5,8 @@ permalink: /categories/
 ---
 
 {% for category in site.data.categories.categories %}
-  {% assign category_posts = site.categories[category.name] %}
+  {% assign category_name = category.name %}
+  {% assign category_posts = site.categories[category_name] %}
   {% assign category_count = category_posts | size %}
   {% if category_count > 0 %}{% assign category_posts = category_posts | sort: "date" | reverse %}{% endif %}
   <section class="category-archive" id="{{ category.slug }}">
@@ -20,7 +21,8 @@ permalink: /categories/
       <p class="category-archive__empty">아직 분류된 글이 없습니다.</p>
     {% endif %}
     {% for child in category.children %}
-      {% assign child_posts = site.categories[child.name] %}
+      {% assign child_name = child.name %}
+      {% assign child_posts = site.categories[child_name] %}
       {% assign child_count = child_posts | size %}
       {% if child_count > 0 %}{% assign child_posts = child_posts | sort: "date" | reverse %}{% endif %}
       <section class="category-archive__child" id="{{ child.slug }}">
