@@ -202,14 +202,14 @@ html[data-theme] .category-sidebar__leaf.is-current {
   color: var(--site-text);
   background: var(--site-selected-bg);
 }
-.category-sidebar__list > .category-sidebar__item { font-size: 1rem; }
-.category-sidebar__group ul > .category-sidebar__item { font-size: .94rem; }
-.category-sidebar__group ul .category-sidebar__group ul > .category-sidebar__item { font-size: .9rem; }
-.category-sidebar__overview { font-size: .85rem; }
+.category-sidebar__list > .category-sidebar__item { font-size: 17px; }
+.category-sidebar__group ul > .category-sidebar__item { font-size: 16px; }
+.category-sidebar__group ul .category-sidebar__group ul > .category-sidebar__item { font-size: 15px; }
+.category-sidebar__overview { font-size: 14px; }
 .category-sidebar__group summary,
-.category-sidebar__leaf { min-height: 2.65em; }
-.category-sidebar__group li { min-height: 2.5em; padding: .2em .35em; }
-.category-sidebar__group li a { display: flex; flex: 1; min-height: 2.4em; align-items: center; justify-content: space-between; }
+.category-sidebar__leaf { min-height: 44px; }
+.category-sidebar__group li { min-height: 44px; padding: .2em .35em; }
+.category-sidebar__group li a { display: flex; flex: 1; min-height: 44px; align-items: center; justify-content: space-between; }
 
 html[data-theme] .blog-profile-card a.blog-profile-card__button--primary { color: #fff; }
 html[data-theme] .blog-profile-card a.blog-profile-card__button:not(.blog-profile-card__button--primary) { color: var(--site-link); }
