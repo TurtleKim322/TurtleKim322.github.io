@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "서울 Sentinel-1 PS-InSAR 기술 블로그 시리즈"
 permalink: /insar-seoul/series/
 author_profile: true
