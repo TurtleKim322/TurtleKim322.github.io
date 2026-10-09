@@ -190,6 +190,12 @@ html[data-theme] .category-archive { border-color: var(--site-border); }
 .masthead-tools .theme-toggle { min-width: 2.65rem; min-height: 2.65rem; }
 
 html[data-theme] .category-sidebar__menu { color: var(--site-text); }
+html[data-theme] .category-sidebar__toggle {
+  color: var(--site-text);
+  background: var(--site-panel);
+  border-color: var(--site-border);
+}
+[data-category-sidebar] .category-sidebar__menu[hidden] { display: none; }
 html[data-theme] .category-sidebar__group summary,
 html[data-theme] .category-sidebar__leaf,
 html[data-theme] .category-sidebar__group li a { color: var(--site-text); }
