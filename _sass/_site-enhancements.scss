@@ -47,6 +47,9 @@ html[data-theme] .masthead a,
 html[data-theme] .page__title a,
 html[data-theme] .category-sidebar__title,
 html[data-theme] .toc a { color: var(--site-text); }
+html[data-theme] .category-sidebar__group summary,
+html[data-theme] .category-sidebar__group li a { color: var(--site-text); }
+html[data-theme] .category-sidebar__overview { color: var(--site-muted); }
 html[data-theme] .page__meta,
 html[data-theme] .archive__item-excerpt,
 html[data-theme] .taxonomy__count,
