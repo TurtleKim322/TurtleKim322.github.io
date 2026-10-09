@@ -2,24 +2,25 @@
 title: "서울 Sentinel-1 PS-InSAR 기술 블로그 시리즈"
 permalink: /insar-seoul/series/
 author_profile: true
+toc: true
 ---
 
-서울 지역 Sentinel-1 시계열을 StaMPS로 처리한 과정을 검증 가능한 자료와 설명용 개념도를 구분해 기록한다. P9 결과는 AOI 바깥에 놓인 진단 patch로 표시하고, 원본 로그가 없는 전처리/공동등록 단계는 검증 대기 상태로 둔다.
+서울 Sentinel-1 시계열을 StaMPS로 처리한 과정을 데이터 근거, 개념 설명, 검증 상태로 나누어 기록한다. 각 결과 그림에는 patch와 측정량을 적고, AOI 전체 결과인지 진단용 patch인지 구별한다. 시리즈에 글이 있다는 사실을 전체 처리가 끝났다는 의미로 해석하지 않는다.
 
 ## 공개 글
 
-1. [프로젝트 개요](/insar-seoul/01-overview/)
-2. [AOI와 IW/Burst 후보 범위](/insar-seoul/02-aoi-burst/)
-3. [마스터 영상과 수직 기준선](/insar-seoul/04-master/)
-4. [간섭 위상 점검](/insar-seoul/06-interferogram/)
-5. [후보점과 patch 중복 검증](/insar-seoul/07-candidates/)
-6. [Octave와 C 처리 진단](/insar-seoul/08-debug/)
-7. [StaMPS Step 1–2 진단 결과](/insar-seoul/09-step1-2/)
-8. [당시 WSL 저장 공간과 데이터 관리](/insar-seoul/10-storage/)
+- **#1** [프로젝트 범위와 처리 환경](/insar-seoul/01-overview/)
+- **#2** [AOI와 IW/Burst 범위](/insar-seoul/02-aoi-burst/)
+- **#4** [기준 영상과 수직 기준선](/insar-seoul/04-master/)
+- **#6** [간섭 위상과 wrapped phase](/insar-seoul/06-interferogram/)
+- **#7** [후보점, patch 중첩과 집계](/insar-seoul/07-candidates/)
+- **#8** [StaMPS 실행 오류 진단](/insar-seoul/08-debug/)
+- **#9** [P9 StaMPS Step 1–3 진단 결과](/insar-seoul/09-step1-2/)
+- **#10** [당시 WSL 저장공간과 복구 기록](/insar-seoul/10-storage/)
 
 ## 검증 대기
 
-- #3 SNAP 전처리: SAFE annotation, burst별 설정과 실제 processing graph 대조 필요.
-- #5 TOPS 공동등록: ESD 잔차 로그와 실제 SNAP 그래프 대조 필요.
+- **#3 SNAP 전처리:** 검증 초안은 비공개 상태다. SAFE annotation, 실행한 GPT/XML, 124개 영상의 성공·실패 로그 대조가 필요하다.
+- **#5 TOPS 공동등록:** 검증 초안은 비공개 상태다. 실제 master–secondary 쌍 목록, Back-Geocoding 설정과 ESD 잔차 로그 대조가 필요하다.
 
-이 목차는 시리즈 전체가 완성되었다는 의미가 아니다. Step 3 이후의 전체 patch 분석과 LOS 변위 해석은 별도 검증 후 추가한다.
+P9와 P14 로그에서 Step 3의 선택 완료 기록을 확인했지만, 이것은 해당 patch들의 기록이다. 나머지 PATCH의 처리 상태와 최종 LOS 시계열은 별도로 검증해야 하며, 현재 공개 글은 서울 전체의 변위 제품을 주장하지 않는다.
