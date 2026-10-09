@@ -174,11 +174,11 @@ html[data-theme] .category-archive { border-color: var(--site-border); }
   background: var(--site-panel, #fff);
   cursor: pointer;
 }
-.masthead-tools { flex-direction: row; align-items: center; gap: .55rem; }
+.masthead-tools { width: max-content; flex-direction: row; align-items: center; gap: .55rem; }
 .site-visitor-count { max-width: none; margin: 0; padding: 0; gap: .25rem; white-space: nowrap; }
 .site-visitor-count__divider { padding-inline: .15rem; }
 .masthead-tools .site-search {
-  flex: 0 1 clamp(16rem, 25vw, 22rem);
+  flex: 0 0 clamp(16rem, 25vw, 22rem);
   width: clamp(16rem, 25vw, 22rem);
   height: 2.65rem;
   border-color: var(--site-text);
