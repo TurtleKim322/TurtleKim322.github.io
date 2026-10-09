@@ -8,7 +8,8 @@
         {% assign category_posts = site.categories[category.name] %}
         {% assign category_count = category_posts | size %}
         {% assign category_is_current = false %}
-        {% if page.categories contains category.name or page.taxonomy == category.name %}{% assign category_is_current = true %}{% endif %}
+        {% if page.categories contains category.name %}{% assign category_is_current = true %}{% endif %}
+        {% if page.taxonomy == category.name %}{% assign category_is_current = true %}{% endif %}
         <li class="category-sidebar__item{% if category_is_current %} is-current{% endif %}">
           {% if category.children %}
             <details class="category-sidebar__group" data-category-group="{{ category.slug }}"{% if category_is_current %} open{% endif %}>
@@ -22,7 +23,8 @@
                   {% assign child_posts = site.categories[child.name] %}
                   {% assign child_count = child_posts | size %}
                   {% assign child_is_current = false %}
-                  {% if page.categories contains child.name or page.taxonomy == child.name %}{% assign child_is_current = true %}{% endif %}
+                  {% if page.categories contains child.name %}{% assign child_is_current = true %}{% endif %}
+                  {% if page.taxonomy == child.name %}{% assign child_is_current = true %}{% endif %}
                   <li{% if child_is_current %} class="is-current"{% endif %}>
                     <a href="{{ '/categories/' | relative_url }}#{{ child.slug }}"{% if child_is_current %} aria-current="page"{% endif %}>{{ child.name | escape }}</a>
                     <span class="category-sidebar__count">{{ child_count }}</span>
