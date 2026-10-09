@@ -1,0 +1,8 @@
+projects:
+  - name: "서울 PS-InSAR"
+    slug: seoul-psinsar
+    url: /projects/seoul-psinsar/
+    description: "Sentinel-1 SAR 자료로 서울 지역의 지표 변위를 분석하며, 실제 처리 과정과 검증 과정을 기록하는 개인 프로젝트입니다."
+    data: "Sentinel-1 IW SLC 124 scenes"
+    tools: "SNAP · StaMPS · GNU Octave"
+    status: "StaMPS PS-InSAR 처리 및 결과 검증"

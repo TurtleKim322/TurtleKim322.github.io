@@ -1,0 +1,22 @@
+{% assign category_name = include.category.name %}
+{% assign category_posts = site.categories[category_name] %}
+{% assign category_count = category_posts | size %}
+{% if category_count > 0 %}{% assign category_posts = category_posts | sort: "date" | reverse %}{% endif %}
+<section class="category-archive{% if include.depth > 0 %} category-archive__child{% endif %}" id="{{ include.category.slug }}" data-category-archive>
+  {% if include.depth == 0 %}<h2>{{ include.category.name | escape }} <span class="taxonomy__count">{{ category_count }}</span></h2>{% else %}<h3>{{ include.category.name | escape }} <span class="taxonomy__count">{{ category_count }}</span></h3>{% endif %}
+  {% if category_count > 0 %}
+    <ul>
+      {% for post in category_posts %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="category-archive__empty">아직 분류된 글이 없습니다.</p>
+  {% endif %}
+  {% if include.category.children %}
+    {% assign child_depth = include.depth | plus: 1 %}
+    {% for child in include.category.children %}
+      {% include category-archive-node.html category=child depth=child_depth %}
+    {% endfor %}
+  {% endif %}
+</section>

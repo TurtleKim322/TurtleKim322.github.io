@@ -1,26 +1,30 @@
 categories:
-  - name: 보안
+  - name: "보안"
     slug: security
-  - name: 취미
+  - name: "취미"
     slug: hobby
     children:
-      - name: 개인 프로젝트
+      - name: "개인 프로젝트"
         slug: personal-project
-      - name: 나의 취미
+        children:
+          - name: "서울 PS-InSAR"
+            slug: seoul-psinsar
+            url: /projects/seoul-psinsar/
+      - name: "나의 취미"
         slug: my-hobby
-  - name: 프로그래밍
+  - name: "프로그래밍"
     slug: programming
     children:
-      - name: 알고리즘
+      - name: "알고리즘"
         slug: algorithm
-      - name: 신호처리
+      - name: "신호처리"
         slug: signal-processing
-      - name: 양자 컴퓨터 프로그래밍
+      - name: "양자 컴퓨터 프로그래밍"
         slug: quantum-programming
-  - name: 도전과제
+  - name: "도전과제"
     slug: challenge
     children:
-      - name: 논문 리뷰
+      - name: "논문 리뷰"
         slug: paper-review
-  - name: 수학
+  - name: "수학"
     slug: mathematics

@@ -2,6 +2,8 @@
 layout: single
 title: "서울 Sentinel-1 PS-InSAR 기술 블로그 시리즈"
 permalink: /insar-seoul/series/
+categories: [취미, 개인 프로젝트, 서울 PS-InSAR]
+project: seoul-psinsar
 author_profile: true
 toc: true
 ---

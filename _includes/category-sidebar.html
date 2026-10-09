@@ -5,42 +5,7 @@
     <a class="category-sidebar__all" href="{{ '/categories/' | relative_url }}">카테고리 전체보기</a>
     <ul class="category-sidebar__list">
       {% for category in site.data.categories.categories %}
-        {% assign category_name = category.name %}
-        {% assign category_posts = site.categories[category_name] %}
-        {% assign category_count = category_posts | size %}
-        {% assign category_is_current = false %}
-        {% if page.categories contains category_name %}{% assign category_is_current = true %}{% endif %}
-        {% if page.taxonomy == category_name %}{% assign category_is_current = true %}{% endif %}
-        <li class="category-sidebar__item{% if category_is_current %} is-current{% endif %}">
-          {% if category.children %}
-            <details class="category-sidebar__group" data-category-group="{{ category.slug }}"{% if category_is_current %} open{% endif %}>
-              <summary aria-label="{{ category.name | escape }} 하위 카테고리 펼치기/접기">
-                <span>{{ category.name | escape }}</span>
-                <span class="category-sidebar__count">{{ category_count }}</span>
-              </summary>
-              <a class="category-sidebar__overview" href="{{ '/categories/' | relative_url }}#{{ category.slug }}">{{ category.name | escape }} 전체보기</a>
-              <ul>
-                {% for child in category.children %}
-                  {% assign child_name = child.name %}
-                  {% assign child_posts = site.categories[child_name] %}
-                  {% assign child_count = child_posts | size %}
-                  {% assign child_is_current = false %}
-                  {% if page.categories contains child_name %}{% assign child_is_current = true %}{% endif %}
-                  {% if page.taxonomy == child_name %}{% assign child_is_current = true %}{% endif %}
-                  <li{% if child_is_current %} class="is-current"{% endif %}>
-                    <a href="{{ '/categories/' | relative_url }}#{{ child.slug }}"{% if child_is_current %} aria-current="page"{% endif %}>{{ child.name | escape }}</a>
-                    <span class="category-sidebar__count">{{ child_count }}</span>
-                  </li>
-                {% endfor %}
-              </ul>
-            </details>
-          {% else %}
-            <a class="category-sidebar__leaf{% if category_is_current %} is-current{% endif %}" href="{{ '/categories/' | relative_url }}#{{ category.slug }}"{% if category_is_current %} aria-current="page"{% endif %}>
-              <span>{{ category.name | escape }}</span>
-              <span class="category-sidebar__count">{{ category_count }}</span>
-            </a>
-          {% endif %}
-        </li>
+        {% include category-sidebar-node.html category=category %}
       {% endfor %}
     </ul>
   </nav>

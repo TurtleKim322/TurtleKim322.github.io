@@ -1,6 +1,7 @@
 {% assign locale = include.locale | default: site.locale %}
 <div class="page__comments">
   {% capture comments_label %}{{ site.data.ui-text[locale].comments_label | default: "Comments" }}{% endcapture %}
+  <section class="public-comments">
   {% case site.comments.provider %}
     {% when "discourse" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
@@ -170,13 +171,13 @@
         {% endif %}
       </section>
     {% when "utterances" %}
-      <h4 class="page__comments-title">&#xB313;&#xAE00;</h4>
-      <p class="comments-provider-note">&#xACF5;&#xAC1C; &#xB313;&#xAE00;&#xC774;&#xBA70;, GitHub &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xD558;&#xBA74; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+      <h4 class="page__comments-title">공개 댓글</h4>
+      <p class="comments-provider-note">다른 방문자도 볼 수 있습니다. GitHub 계정으로 로그인해야 작성할 수 있습니다.</p>
       <script src="https://utteranc.es/client.js"
           repo="turtlekim322/turtlekim322.github.io"
           issue-term="pathname"
           label="comments"
-          theme="github-light"
+          theme="preferred-color-scheme"
           crossorigin="anonymous"
           async>
        </script>
@@ -187,4 +188,25 @@
     {% when "custom" %}
       {% include /comments-providers/custom.html %}
   {% endcase %}
+  </section>
+  <details class="private-comment">
+    <summary>비밀 댓글 보내기</summary>
+    <p>이 내용은 공개되지 않고 블로그 관리자에게만 전달됩니다.</p>
+    {% if site.private_comments.endpoint != empty %}
+      <form action="{{ site.private_comments.endpoint | escape }}" method="post" class="private-comment__form">
+        <input type="hidden" name="_subject" value="비밀 댓글: {{ page.title | escape }}">
+        <input type="hidden" name="포스트" value="{{ page.url | absolute_url }}">
+        <div class="private-comment__honeypot" aria-hidden="true"><label for="private-comment-website">웹사이트</label><input id="private-comment-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+        <label for="private-comment-name">이름</label>
+        <input id="private-comment-name" type="text" name="name" required maxlength="80">
+        <label for="private-comment-email">이메일 (답변을 원할 때만 입력)</label>
+        <input id="private-comment-email" type="email" name="email" autocomplete="email">
+        <label for="private-comment-message">내용</label>
+        <textarea id="private-comment-message" name="message" rows="5" required maxlength="5000"></textarea>
+        <button type="submit" class="btn btn--primary">비밀 댓글 보내기</button>
+      </form>
+    {% else %}
+      <p class="notice--info">비밀 댓글 수신 서비스가 아직 연결되지 않아 전송을 준비 중입니다. 이 영역에 입력한 내용은 저장되거나 전송되지 않습니다.</p>
+    {% endif %}
+  </details>
 </div>

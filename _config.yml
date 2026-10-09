@@ -68,7 +68,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
+  hide                   : true
+private_comments:
+  endpoint: "" # Configure a Formspree form endpoint; never put an admin API key here.
 search                   : true
 search_full_content      : # true, false (default)
 search_provider          : lunr
@@ -110,7 +112,7 @@ analytics:
   provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-KRP8B85TLL"
-    anonymize_ip         : false # true, false (default)
+  anonymize_ip         : true # true, false (default)
 
 
 # Site Author

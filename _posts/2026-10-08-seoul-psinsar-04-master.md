@@ -2,7 +2,9 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #4 - 기준 영상은 어떻게 골랐나"
 date: 2026-10-08
 permalink: /insar-seoul/04-master/
-categories: [프로그래밍, 신호처리]
+categories: [취미, 개인 프로젝트, 서울 PS-InSAR, 프로그래밍, 신호처리]
+project: seoul-psinsar
+project_order: 3
 tags: [Sentinel-1, InSAR, PS-InSAR]
 author_profile: true
 toc: true

@@ -40,6 +40,14 @@
       });
     }
 
+    sidebar.querySelectorAll('[aria-current="page"]').forEach(function (link) {
+      var parent = link.closest('[data-category-group]');
+      while (parent) {
+        parent.open = true;
+        parent = parent.parentElement.closest('[data-category-group]');
+      }
+    });
+
     try {
       savedGroups = JSON.parse(window.localStorage.getItem(storageKey) || '{}');
     } catch (error) {
@@ -85,6 +93,36 @@
 
     updateMobileMenu();
     window.addEventListener('resize', updateMobileMenu);
+
+    function filterCategoryArchive() {
+      if (!document.querySelector('[data-category-archive]')) return;
+      var slug = window.location.hash.slice(1);
+      var sections = document.querySelectorAll('[data-category-archive]');
+      sections.forEach(function (section) {
+        section.classList.remove('is-selected-category', 'is-filter-parent');
+        if (section.querySelector(':scope > [data-category-archive]')) section.classList.add('is-category-branch');
+      });
+      if (!slug) {
+        sections.forEach(function (section) { section.hidden = false; });
+        return;
+      }
+      var selected = document.getElementById(decodeURIComponent(slug));
+      if (selected && selected.hasAttribute('data-category-archive')) {
+        selected.classList.add('is-selected-category');
+        var ancestor = selected.parentElement.closest('[data-category-archive]');
+        while (ancestor) {
+          ancestor.classList.add('is-filter-parent');
+          ancestor = ancestor.parentElement.closest('[data-category-archive]');
+        }
+      }
+      sections.forEach(function (section) {
+        section.hidden = section.id !== slug && !(selected && section.contains(selected));
+      });
+      if (selected) selected.scrollIntoView({ block: 'start' });
+    }
+
+    filterCategoryArchive();
+    window.addEventListener('hashchange', filterCategoryArchive);
   }
 
   if (document.readyState === 'loading') {
