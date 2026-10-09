@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #7 - PS 후보를 고르고 PATCH 수를 세기"
 date: 2026-10-08
 permalink: /insar-seoul/07-candidates/
-categories: [위성]
+categories: [프로그래밍, 신호처리]
 tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true

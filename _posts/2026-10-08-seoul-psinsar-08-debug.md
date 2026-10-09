@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #8 - Octave 오류를 하나씩 따라가기"
 date: 2026-10-08
 permalink: /insar-seoul/08-debug/
-categories: [기술]
+categories: [프로그래밍, 신호처리]
 tags: [PS-InSAR, StaMPS, GNU Octave]
 author_profile: true
 toc: true

@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #9 - P9 후보는 얼마나 안정적이었나"
 date: 2026-10-08
 permalink: /insar-seoul/09-step1-2/
-categories: [위성]
+categories: [프로그래밍, 신호처리]
 tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true

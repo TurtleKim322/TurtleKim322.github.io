@@ -16,6 +16,7 @@ layout: default
 {% endif %}
 
 <div id="main" class="blog-layout" role="main">
+  <aside class="blog-layout__categories">{% include category-sidebar.html locale=locale %}</aside>
   <div class="blog-layout__content">
     <div class="archive">
       {% unless page.header.overlay_color or page.header.overlay_image %}

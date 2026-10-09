@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #1 - 서울을 레이더로 살펴보기"
 date: 2026-10-08
 permalink: /insar-seoul/01-overview/
-categories: [위성]
+categories: [프로그래밍, 신호처리]
 tags: [Sentinel-1, SAR, InSAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true

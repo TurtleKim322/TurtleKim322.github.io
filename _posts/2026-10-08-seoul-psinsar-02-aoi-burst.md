@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #2 - 서울이 들어가는 IW와 Burst 찾기"
 date: 2026-10-08
 permalink: /insar-seoul/02-aoi-burst/
-categories: [위성]
+categories: [프로그래밍, 신호처리]
 tags: [Sentinel-1, SAR, PS-InSAR]
 author_profile: true
 toc: true

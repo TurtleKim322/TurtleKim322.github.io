@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #6 - 처음 확인한 wrapped phase"
 date: 2026-10-08
 permalink: /insar-seoul/06-interferogram/
-categories: [위성]
+categories: [프로그래밍, 신호처리]
 tags: [Sentinel-1, InSAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true

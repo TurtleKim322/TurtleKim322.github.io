@@ -16,15 +16,17 @@ author_profile: false
   {% endunless %}
 {% endif %}
 
-<div id="main" role="main">
-  {% include sidebar.html locale=locale %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
-    {% endunless %}
-    {% for post in page.posts %}
-      {% include archive-single.html locale=locale %}
-    {% endfor %}
+<div id="main" class="blog-layout" role="main">
+  <aside class="blog-layout__categories">{% include category-sidebar.html locale=locale %}</aside>
+  <div class="blog-layout__content">
+    <div class="archive">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
+      {% endunless %}
+      {% for post in page.posts %}
+        {% include archive-single.html locale=locale %}
+      {% endfor %}
+    </div>
   </div>
+  <aside class="blog-layout__sidebar">{% include blog-sidebar.html locale=locale %}</aside>
 </div>

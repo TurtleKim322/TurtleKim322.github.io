@@ -2,7 +2,7 @@
 title: "서울 Sentinel-1 PS-InSAR 분석 #10 - WSL 저장공간이 부족해졌을 때"
 date: 2026-10-08
 permalink: /insar-seoul/10-storage/
-categories: [기술]
+categories: [취미, 개인 프로젝트]
 tags: [PS-InSAR, WSL2, 데이터 관리]
 author_profile: true
 toc: true
