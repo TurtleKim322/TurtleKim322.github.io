@@ -1,5 +1,5 @@
 ---
-title: "서울 Sentinel-1 PS-InSAR 분석 #9 - P9 StaMPS Step 1–3 진단 결과"
+title: "서울 Sentinel-1 PS-InSAR 분석 #9 - P9 후보는 얼마나 안정적이었나"
 date: 2026-10-08
 permalink: /insar-seoul/09-step1-2/
 categories: [위성]
@@ -8,40 +8,40 @@ author_profile: true
 toc: true
 ---
 
-StaMPS Step 1은 후보점의 입력 자료를 준비하고 Step 2는 후보별 gamma 등 위상 안정성 관련 값을 추정한다. Step 3에서는 coherence 재추정과 임계값에 따라 선택을 진행한다. 이 글은 **P9 한 patch의 기존 산출물과 로그**를 중심으로 설명하고, P14의 선택 완료 기록도 별도로 표시한다. 두 patch의 결과를 서울 전체 분석으로 확대 해석하지 않는다.
+후보점을 뽑았다고 바로 움직임을 읽을 수 있는 것은 아니다. StaMPS는 먼저 여러 시기의 위상 이력을 이용해 후보별 gamma를 추정한다. 그 다음 단계에서 coherence 기준과 다른 조건을 사용해 점을 선택한다. 용어가 비슷해 보이지만, 어느 Step의 어느 변수인지 확인해야 혼동하지 않는다.
 
-## 진단 patch의 위치
+먼저 위치를 확인했다. P9 후보의 경도 범위는 126.5181–126.7532°, 위도는 37.3654–37.5279°다. 프로젝트 AOI의 대부분과 겹치지 않는 진단용 PATCH다. 아래 결과를 서울 전체의 지도로 읽으면 안 된다.
 
-P9 후보 좌표 범위는 경도 126.5181–126.7532°, 위도 37.3654–37.5279°다. 프로젝트 AOI의 대부분과 겹치지 않으며 일부 경계만 인접한다. 따라서 아래 그림과 통계는 서울 AOI 대표값이 아니라 P9 실행 진단 자료다.
+## Step 2에서 추정한 gamma
 
-## Step 2: gamma와 coherence 자료
+gamma는 여러 관측에서 후보점의 위상이 얼마나 일관되게 설명되는지 나타내는 값이다. StaMPS의 `ps_est_gamma_quick.m`은 이를 추정하면서 결과를 `coh_ps`라는 변수에 저장한다. 따라서 아래 그래프 제목의 gamma와 코드 변수명 `coh_ps`는 여기서 서로 다른 지표 두 개를 가리키지 않는다.
+
+P9 `ps1.mat`에는 후보 303,941개가 있다. 그래프를 만들 때 먼저 분포가 어느 구간에 모이는지, 비정상 값이 있는지 확인했다. 중앙값은 0.8773이고 유한하지 않은 값은 0개였다.
 
 ![P9 Step 2 gamma 분포](/assets/images/insar-seoul/09-stamps-step1-2/step2-gamma-histogram.png)
 
-그림 1. P9 `ps1.mat` 후보 303,941개의 Step 2 gamma 분포. 표시된 중앙값은 0.8773이고 비유한 값은 0개다. 파일 이름은 coherence histogram이지만 그래프 제목과 배열 근거에 맞춰 이 값을 gamma 분포로 읽는다. gamma와 Step 3에서 재추정되는 coherence는 관련은 있어도 같은 처리 단계의 값이라고 단정하지 않는다.
+이 히스토그램은 gamma 추정 결과를 요약한다. Step 3에서 coherence를 다시 추정하고 선택한 결과까지 보여 주는 그래프는 아니다.
 
-![P9 Step 2 coherence 재추정 지도](/assets/images/insar-seoul/09-stamps-step1-2/step2-coherence-map.png)
+## 지도에서 같은 값을 공간으로 보기
 
-그림 2. P9 후보 좌표에 표시한 `coh_ps` 값(0–1). 값의 공간 분포를 보여 주며 변위량은 아니다.
+아래 지도도 색상 막대에 `coh_ps`라고 적혀 있다. 그래프 제목은 Step 2 gamma다. 코드에서 이 두 이름이 연결되는 만큼, 히스토그램과 다른 측정량이라고 보지 않고 같은 추정값의 공간 분포로 설명한다. 색은 0–1 범위의 값이지 지표 이동량이 아니다.
 
-## Step 2: 잔여 지형 위상 계수와 높이
+![P9 Step 2 gamma 공간 분포](/assets/images/insar-seoul/09-stamps-step1-2/step2-coherence-map.png)
 
-![P9 K parameter 지도](/assets/images/insar-seoul/09-stamps-step1-2/step2-kps-map.png)
+## 지형 잔차와 후보 높이
 
-그림 3. P9의 `K_ps` 잔여 지형 위상 계수 분포. 단위는 수직 기준선 1 m당 rad로 표시되어 있다. 이는 지형 잔차와 관련된 계수이지 LOS 변위 속도 단위가 아니다.
+간섭 위상에는 지형 자료의 오차도 섞일 수 있다. `K_ps`는 위상에서 수직 기준선 변화와 함께 달라지는 잔여 지형 성분을 나타내는 계수다. 그림의 단위는 기준선 1 m당 rad이며, mm/년으로 표현하는 침하 속도와 다르다.
+
+![P9 잔여 지형 위상 계수 지도](/assets/images/insar-seoul/09-stamps-step1-2/step2-kps-map.png)
+
+높이 그림은 후보 위치에 연결된 높이 자료를 보여 준다. 원본에서 `-32768`은 결측을 나타내는 sentinel이라 실제 고도로 취급하지 않았다. 수직 datum도 확인되지 않아 절대 표고로 해석할 수 없다.
 
 ![P9 후보점 높이](/assets/images/insar-seoul/09-stamps-step1-2/candidate-height-map.png)
 
-그림 4. 후보점의 높이 자료. 원본의 `-32768` sentinel은 유효 표고로 취급하지 않았다. 수직 datum은 확인되지 않아 절대 고도 비교에는 주의가 필요하다.
+## 로그에는 선택 결과가 남아 있다
 
-## Step 3 로그에서 확인되는 범위
+Step 3에서는 gamma와 amplitude dispersion 조건을 바탕으로 coherence를 재평가하고 후보를 고른다. P9 로그에는 302,481개, P14 로그에는 460,353개가 선택됐다고 기록되어 있다. 이는 두 PATCH의 처리 기록이다. 20개 PATCH 전체가 완료됐거나 이 점들이 최종 변위 시계열로 검증됐다는 뜻은 아니다.
 
-P9 `STAMPS.log`에는 2026-10-05에 Step 3가 시작되고, 2026-10-06에 coherence 재추정 뒤 **302,481개** 후보가 선택되었다는 기록이 있다. P14 로그에는 2026-10-07에 Step 3가 시작되고 2026-10-08에 **460,353개** 후보 선택이 기록되어 있다. 이는 각 patch의 실행 이력이다. 전체 20개 patch의 Step 3 완료, 최종 시계열 품질, LOS 변위 해석을 입증하지 않는다.
+P9은 서울 AOI 대부분 바깥에 놓인 진단용 PATCH다. 그래서 gamma와 `K_ps`, 높이 그림도 해당 patch에서 어떤 값이 나왔는지를 설명할 뿐, 서울 전체의 대표 결과가 아니다. 모든 PATCH의 상태, 기준점과 보정, phase unwrapping을 확인해야 최종 LOS 변위를 해석할 수 있다. 현재 자료만으로 서울 전체 변위 지도를 제시하지 않는 이유다.
 
-P9 로그의 Step 2에서는 `lambda=0.0554658`, `n_trial_wraps=0.937572`가 기록된다. 이는 앞서 초기 전역 로그의 `lambda=NaN`에서 파라미터를 바로잡은 뒤 계산된 구체적 실행값이다. Step 3 선택 수 역시 입력 후보 수와 다르며, 단순히 남은 “안정한 변위점” 수로 읽지 않는다.
-
-## 해석의 한계와 다음 검증
-
-P9는 AOI 안팎의 경계에 걸친 진단용 patch다. gamma, `coh_ps`, `K_ps`, height map은 알고리즘 중간 산출물을 각각 다른 물리·통계량으로 표현한다. 최종 LOS 변위 시계열을 말하려면 모든 patch 처리 상태, 위상 unwrapping, 기준점, 오차 보정과 공간 정합을 확인해야 한다. 현재 공개 자료는 이 전 과정을 완료한 서울 변위 지도가 아니다.
-
-앞 글: [Octave와 C 처리 진단](/insar-seoul/08-debug/) · 다음: [당시 WSL 저장 공간 기록](/insar-seoul/10-storage/)
+앞 글: [Octave 오류를 하나씩 따라가기](/insar-seoul/08-debug/) · 다음: [WSL 저장공간이 부족해졌을 때](/insar-seoul/10-storage/)

@@ -1,5 +1,5 @@
 ---
-title: "서울 Sentinel-1 PS-InSAR 분석 #7 - 후보점, patch 중첩과 집계 기준"
+title: "서울 Sentinel-1 PS-InSAR 분석 #7 - PS 후보를 고르고 PATCH 수를 세기"
 date: 2026-10-08
 permalink: /insar-seoul/07-candidates/
 categories: [위성]
@@ -8,38 +8,32 @@ author_profile: true
 toc: true
 ---
 
-PS 후보 수는 어떤 파일과 처리 단계를 세었는지에 따라 달라진다. 이 프로젝트는 20개 PATCH의 `pscands.1.ij` 행, 좌표쌍 중복 제거 결과, 그리고 `ps1.mat`의 patch별 `n_ps`라는 서로 다른 집계를 갖고 있다. 이 값들을 같은 “고유 PS 총수”로 합치지 않고 각각의 의미를 분리한다.
+도시의 모든 픽셀이 PS가 되는 것은 아니다. 같은 지점이 날짜가 바뀌어도 레이더 신호를 비교적 안정적으로 돌려주는지 먼저 살펴야 한다. 이 단계에서 뽑힌 위치를 PS candidate(PS 후보)라고 한다. 후보라는 말 그대로, 아직 최종 변위점으로 선택됐다는 뜻은 아니다.
 
-## 세 가지 집계, 세 가지 의미
+이 프로젝트에서는 평균 진폭에 대한 진폭의 시간적 변동을 나타내는 amplitude dispersion을 후보 선별에 사용했다. 쉽게 말하면, 여러 장의 영상에서 밝기가 얼마나 흔들리는지를 평균 밝기와 비교하는 값이다. 값이 낮으면 반사 세기가 비교적 일정하다는 뜻이다. 기록된 후보 기준은 0.4였지만, 이것만으로 위상 안정성이나 최종 PS 여부까지 판정할 수는 없다.
 
-| 집계 | 확인된 값 | 해석 |
-|---|---:|---|
-| 20개 PATCH의 `pscands.1.ij` 행 합 | 3,539,547 | patch별 후보 좌표 행의 합. patch 간 중첩을 포함할 수 있음 |
-| 좌표쌍을 기준으로 한 과거 중복 제거 | 2,572,868 | azimuth/range 좌표쌍 기준의 이전 집계. 처리 단계와 입력 시점이 현재 `ps1.mat`과 다를 수 있음 |
-| 현재 `ps1.mat`의 `n_ps` 합 | 3,539,534 | patch별 StaMPS 초기자료에 기록된 후보 수의 합. patch별 값이며 전체 고유 위치 수가 아님 |
+처리 면적을 한 번에 다루지 않고 5×4, 모두 20개의 PATCH로 나누었다. 큰 자료를 작은 단위로 처리하기 위한 구성이다. PATCH 가장자리에서는 같은 위치가 이웃 영역에도 들어갈 수 있도록 range 방향 50, azimuth 방향 200의 overlap을 두었다. 그래서 PATCH별 행 수를 단순히 더하면 같은 위치가 여러 번 세어질 수 있다.
 
-첫 번째와 세 번째 합의 차이는 13행이다. 확인 가능한 좌표 자료에서는 결측 지리좌표 행들이 후보 로딩 과정에서 제외된 차이와 일치한다. 반면 2,572,868은 좌표쌍을 중복 키로 사용한 과거 결과다. patch 경계, 중복 처리 시점과 입력 단계가 다르므로 현재 총 `n_ps`와 일대일로 비교할 수 없다. 이 자료만으로 “서울 전체의 고유 PS가 정확히 몇 개”라고 결론내릴 수는 없다.
+## 지도와 막대그래프에서 볼 것
 
-## patch 분포와 후보 수
+아래 막대그래프는 PATCH마다 `pscands.1.ij`에 들어 있는 후보 좌표 행을 센 것이다. 색으로 구분된 PATCH 중 어느 영역의 행이 많은지 볼 수 있지만, 이 수치를 최종 PS 개수로 해석하면 안 된다.
 
-![patch별 원시 후보 행 수](/assets/images/insar-seoul/07-candidates/patch-candidate-count.png)
+![patch별 후보 행 수](/assets/images/insar-seoul/07-candidates/patch-candidate-count.png)
 
-그림 1. PATCH별 `pscands.1.ij` 행 수. 개수는 후보 행이며, 서로 다른 PATCH 사이에 같은 위치가 포함될 수 있다. 분류된 PS 수나 변위 측정 수를 뜻하지 않는다.
+PATCH 경계 그림은 겹쳐 나누는 이유를 보여 주는 **개념도**다. 실제 처리 경계를 정밀한 좌표로 표시한 그림은 아니다.
 
-![patch 경계와 중첩 개념도](/assets/images/insar-seoul/07-candidates/patch-boundaries.png)
+![PATCH 경계 중첩 개념도](/assets/images/insar-seoul/07-candidates/patch-boundaries.png)
 
-그림 2. **개념도.** PATCH를 겹치게 나누는 이유와 경계 중복 가능성을 설명한다. 실제 patch 경계의 정밀 좌표 자료는 아니다.
+전체 후보 좌표를 AOI와 함께 그리면 처리 범위가 관심 영역보다 넓다는 것도 보인다. 색은 PATCH 번호를 나타내며 후보의 품질이나 이동량은 아니다.
 
-![전체 PATCH 후보 분포와 AOI](/assets/images/insar-seoul/07-candidates/ps-candidate-spatial-map.png)
+![전체 PATCH 후보 분포와 AOI 경계](/assets/images/insar-seoul/07-candidates/ps-candidate-spatial-map.png)
 
-그림 3. 후보 좌표를 patch별 색으로 표시한 분포. 점은 위상 안정성 선택과 최종 변위 검증이 모두 끝난 결과가 아니다. AOI 사각형 바깥의 후보도 포함되어 있어 서울 AOI 전체 분석 결과와 혼동하지 않도록 했다.
+## 세 숫자가 서로 다른 이유
 
-## 후보에서 PS 측정점까지
+PATCH의 `pscands.1.ij` 행을 모두 더하면 3,539,547행이다. 현재 `ps1.mat`의 patch별 `n_ps`를 합하면 3,539,534개다. 두 값의 13행 차이는 좌표를 변환했을 때 위경도가 [NaN, NaN]으로 나온 행이 후보를 불러오는 과정에서 빠진 것과 맞아떨어진다.
 
-`pscands.1.ij`는 처리 입력에서 만들어진 좌표 인덱스 행을 담고, `ps1.mat`은 StaMPS가 읽은 후보점과 영상별 보조 정보를 저장한다. 후보점이 있다고 해서 모두 최종 PS로 선택되거나 유효한 시계열을 갖는 것은 아니다. Step 2 gamma 추정과 Step 3의 coherence 기반 선택 같은 후속 처리가 후보를 다시 평가한다. 즉 후보 수, 선택된 점 수, 시계열로 해석 가능한 점 수는 다른 단계의 지표다.
+예전에 azimuth와 range 좌표쌍으로 중복을 제거한 집계는 2,572,868개였다. 이 값은 현재 `n_ps`의 합과 계산 시점도, 중복 처리 방식도 다르다. 따라서 세 숫자 중 하나를 “전체 고유 PS 수”라고 골라 부를 수 없다. 후보 행, patch별 후보 수, 좌표쌍 중복 제거 결과를 따로 봐야 한다.
 
-P14에서는 `pscands.1.ij` 행 합과 `ps1.mat`의 `n_ps` 사이에 5행 차이가 확인됐으며, 해당 행들은 지리 좌표가 `[NaN, NaN]`이었다. 다른 patch에서 확인한 결측 행까지 합하면 전체 13행 차이가 맞아떨어진다. 이 관계는 자료 정합 점검에는 유용하지만, patch 중복 집계 문제까지 해소하지는 않는다.
+후보가 만들어진 뒤에도 StaMPS는 위상 안정성을 추정하고 다시 선택한다. 다음 글에서는 실제 처리 중 입력 자료와 Octave 환경에서 문제가 어떻게 이어졌는지 기록한다.
 
-후보점 통계를 재현하려면 같은 자료 버전에서 patch별 입력 행 수, 결측 제거 수, 선택 단계 결과를 따로 남기고, 좌표쌍 중복 제거 키와 순서를 명시해야 한다. 이 시리즈에서는 검증된 결과가 추가되기 전까지 합계 하나를 “전체 고유 PS 수”라고 표기하지 않는다.
-
-앞 글: [wrapped phase 점검](/insar-seoul/06-interferogram/) · 다음: [Octave와 C 처리 진단](/insar-seoul/08-debug/)
+앞 글: [처음 확인한 wrapped phase](/insar-seoul/06-interferogram/) · 다음: [StaMPS 실행 오류 따라가기](/insar-seoul/08-debug/)
