@@ -2,7 +2,7 @@
 title: "Python SAR 시뮬레이터 #2 — 신호를 영상으로 만드는 수학"
 date: 2026-10-10 00:01:00 +0900
 last_modified_at: 2026-10-10
-date_format: "%Y? %m? %d?"
+date_format: "%Y년 %m월 %d일"
 permalink: /sar-python/02-mathematics/
 categories: [취미, 개인 프로젝트, 수학, 신호처리]
 tags: [SAR, Python, 복소수, 푸리에변환, 정합필터, RCMC]

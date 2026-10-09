@@ -2,7 +2,7 @@
 title: "Python SAR 시뮬레이터 #1 — 점 표적에서 영상까지"
 date: 2026-10-10 00:00:00 +0900
 last_modified_at: 2026-10-10
-date_format: "%Y? %m? %d?"
+date_format: "%Y년 %m월 %d일"
 permalink: /sar-python/01-simulation/
 categories: [취미, 개인 프로젝트, 프로그래밍, 신호처리]
 tags: [SAR, Python, 시뮬레이션, Range-Doppler, GitHub]
