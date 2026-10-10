@@ -40,3 +40,6 @@
 - name: 위성
   slug: satellite
   url: /categories/satellite/
+- name: 논문 작성 공부
+  slug: research-study
+  url: /categories/research-study/

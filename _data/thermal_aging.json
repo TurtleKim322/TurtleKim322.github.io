@@ -1,0 +1,128 @@
+[
+  {
+    "number": 1,
+    "label": "01",
+    "title": "왜 열수명의 보수성을 연구하려고 하는가",
+    "status": "완료",
+    "url": "/research-study/01/"
+  },
+  {
+    "number": 2,
+    "label": "02",
+    "title": "원전 Environmental Qualification 규제체계 알아보기",
+    "status": "예정",
+    "url": "/research-study/02/"
+  },
+  {
+    "number": 3,
+    "label": "03",
+    "title": "원전 EQ에서 Aging은 무엇인가",
+    "status": "예정",
+    "url": "/research-study/03/"
+  },
+  {
+    "number": 4,
+    "label": "04",
+    "title": "Arrhenius Equation부터 다시 공부하기",
+    "status": "예정",
+    "url": "/research-study/04/"
+  },
+  {
+    "number": 5,
+    "label": "05",
+    "title": "Arrhenius Equation으로 Thermal Life를 어떻게 계산하는가",
+    "status": "예정",
+    "url": "/research-study/05/"
+  },
+  {
+    "number": 6,
+    "label": "06",
+    "title": "Activation Energy가 열수명 계산에서 왜 중요한가",
+    "status": "예정",
+    "url": "/research-study/06/"
+  },
+  {
+    "number": 7,
+    "label": "07",
+    "title": "온도 1℃ 차이가 원전 기기의 수명에 얼마나 영향을 미칠까",
+    "status": "예정",
+    "url": "/research-study/07/"
+  },
+  {
+    "number": 8,
+    "label": "08",
+    "title": "주변온도와 실제 부품온도는 다르다 — Heat Rise",
+    "status": "예정",
+    "url": "/research-study/08/"
+  },
+  {
+    "number": 9,
+    "label": "09",
+    "title": "Arrhenius 해석에 사용하는 재료 데이터는 어디에서 오는가",
+    "status": "예정",
+    "url": "/research-study/09/"
+  },
+  {
+    "number": 10,
+    "label": "10",
+    "title": "같은 재질인데 Activation Energy가 다른 이유",
+    "status": "예정",
+    "url": "/research-study/10/"
+  },
+  {
+    "number": 11,
+    "label": "11",
+    "title": "IEEE 101에서 배우는 Thermal Life 데이터의 통계",
+    "status": "예정",
+    "url": "/research-study/11/"
+  },
+  {
+    "number": 12,
+    "label": "12",
+    "title": "고온 시험으로 수십 년 수명을 예측해도 되는가",
+    "status": "예정",
+    "url": "/research-study/12/"
+  },
+  {
+    "number": 13,
+    "label": "13",
+    "title": "Thermal Life 해석에서 Conservatism이 필요한 이유",
+    "status": "예정",
+    "url": "/research-study/13/"
+  },
+  {
+    "number": 14,
+    "label": "14",
+    "title": "열수명 평가에 Safety Factor를 적용하면 무엇이 문제인가",
+    "status": "예정",
+    "url": "/research-study/14/"
+  },
+  {
+    "number": 15,
+    "label": "15",
+    "title": "Safety Factor 대신 Confidence Bound를 사용할 수 있을까",
+    "status": "예정",
+    "url": "/research-study/15/"
+  },
+  {
+    "number": 16,
+    "label": "16",
+    "title": "Monte Carlo Simulation으로 Thermal Life 불확실성 분석하기",
+    "status": "예정",
+    "url": "/research-study/16/"
+  },
+  {
+    "number": 17,
+    "label": "17",
+    "title": "어떤 변수가 Thermal Life를 가장 크게 바꾸는가",
+    "status": "예정",
+    "url": "/research-study/17/"
+  },
+  {
+    "number": 18,
+    "label": "18",
+    "title": "지금까지 공부한 내용으로 논문 연구방법 설계하기",
+    "status": "예정",
+    "url": "/research-study/18/"
+  }
+]

@@ -38,6 +38,9 @@ categories:
   - name: 논문 리뷰
     slug: paper-review
     url: /categories/paper-review/
+  - name: 논문 작성 공부
+    slug: research-study
+    url: /categories/research-study/
   url: /categories/challenge/
 - name: 수학
   slug: math

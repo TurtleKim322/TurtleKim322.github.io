@@ -1,0 +1,11 @@
+<nav aria-label="EQ 열적노화 시리즈">
+{% assign previous_number = page.study_number | minus: 1 %}
+{% assign next_number = page.study_number | plus: 1 %}
+{% for item in site.data.thermal_aging %}
+{% if item.number == previous_number %}<p><a href="{{ item.url | relative_url }}">← #{{ item.label }} {{ item.title }}{% if item.status != '완료' %} (학습 개요){% endif %}</a></p>{% endif %}
+{% endfor %}
+<p><a href="{{ '/research-study/' | relative_url }}">논문 작성 공부 전체보기</a></p>
+{% for item in site.data.thermal_aging %}
+{% if item.number == next_number %}<p><a href="{{ item.url | relative_url }}">#{{ item.label }} {{ item.title }}{% if item.status != '완료' %} (학습 개요){% endif %} →</a></p>{% endif %}
+{% endfor %}
+</nav>
