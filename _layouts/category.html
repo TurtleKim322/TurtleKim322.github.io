@@ -5,6 +5,7 @@ layout: archive
 <h2 class="archive__subtitle">{{ page.taxonomy | escape }} <span class="taxonomy__count">{{ category_posts | size }}</span></h2>
 {% if page.taxonomy == 'SAR' %}<p><a href="{{ '/sar-basics/series/' | relative_url }}">SAR 입문 시리즈를 순서대로 읽기</a></p>{% endif %}
 {% if page.taxonomy == '서울 PS-InSAR' %}<p><a href="{{ '/projects/seoul-psinsar/' | relative_url }}">서울 PS-InSAR 프로젝트 소개</a></p>{% endif %}
+{% if page.taxonomy == "논문 작성 공부" %}<p><a href="{{ "/research-study/" | relative_url }}">EQ 열적노화 연구 노트: 로드맵과 18편의 진행상황</a></p>{% endif %}
 <div class="entries-list">
 {% for post in category_posts %}{% include archive-single.html type='list' %}{% else %}<p>아직 분류된 글이 없습니다.</p>{% endfor %}
 </div>
