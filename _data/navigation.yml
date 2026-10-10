@@ -1,4 +1,6 @@
-main: []
+main:
+  - title: "SAR 입문"
+    url: /sar-basics/series/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
