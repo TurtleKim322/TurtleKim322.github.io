@@ -6,3 +6,10 @@ projects:
     data: "Sentinel-1 IW SLC 124 scenes"
     tools: "SNAP · StaMPS · GNU Octave"
     status: "StaMPS PS-InSAR 처리 및 결과 검증"
+  - name: "문서 비교 프로그램"
+    slug: document-compare
+    url: /projects/document-compare/
+    description: "DOCX·PDF·HWPX와 선택적 HWP 지원을 공통 모델로 연결한 Windows 문서 비교 MVP의 개발 기록입니다."
+    data: "직접 생성한 비민감 예제와 자동 테스트"
+    tools: "Python · PyQt6 · PyMuPDF"
+    status: "0.4.2 MVP: 페이지 렌더링 개선 및 90개 테스트 통과, 형식별 제한 존재"

@@ -43,3 +43,6 @@
 - name: 논문 작성 공부
   slug: research-study
   url: /categories/research-study/
+- name: 문서 비교 프로그램
+  slug: document-compare
+  url: /categories/document-compare/
