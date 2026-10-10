@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/04_a.png
+description: "Chirp는 시간이 흐르면서 순간 주파수가 변하는 신호다. SAR의 거리 방향 기준 신호에서는 위상이 시간의 제곱에 비례하며, 이를 미분하면 시간에 비례하는 주파수가 나온다."
 ---
 
 ## 한 줄 요약

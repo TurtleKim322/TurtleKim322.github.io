@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/05_a.png
+description: "거리 해상도는 가까이 있는 두 표적을 구별하는 능력이다. 긴 chirp를 압축한 응답의 폭이 왜 대역폭에 반비례하는지, 그리고 그 값이 거리 표본 간격과 왜 다른지 알아본다."
 ---
 
 ## 한 줄 요약

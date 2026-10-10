@@ -245,14 +245,7 @@ html[data-theme] a:hover { text-decoration: underline; text-underline-offset: .1
 .private-comment__form input,
 .private-comment__form textarea { max-width: 100%; border: 1px solid var(--site-border); border-radius: .35rem; padding: .6rem; }
 .private-comment__form button { justify-self: start; margin-top: .5rem; }
-[data-category-archive][hidden] { display: none !important; }
-.category-archive.is-category-branch:not(.is-selected-category) > ul,
-.category-archive.is-category-branch:not(.is-selected-category) > .category-archive__empty,
-.category-archive.is-filter-parent > h2,
-.category-archive.is-filter-parent > h3,
-.category-archive.is-filter-parent > ul,
-.category-archive.is-filter-parent > .category-archive__empty { display: none; }
-.category-archive__child { margin-inline-start: 1rem; }
+.entries-list > .list__item { padding-block: .8rem; border-bottom: 1px solid var(--site-border, #e4e6e8); }
 
 @media (max-width: 900px) {
   .masthead__menu { float: none; width: 100%; clear: none; }

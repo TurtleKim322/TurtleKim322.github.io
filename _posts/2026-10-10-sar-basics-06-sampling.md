@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/06_a.png
+description: "샘플링은 연속 신호를 일정한 시간 간격의 숫자로 저장하는 일이다. 표본을 거리로 환산하는 방법과 aliasing을 이해하고, 더 촘촘한 표본이 곧 더 좋은 해상도는 아니라는 점을 확인한다."
 ---
 
 ## 한 줄 요약

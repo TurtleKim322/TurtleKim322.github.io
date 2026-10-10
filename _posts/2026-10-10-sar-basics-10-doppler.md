@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/10_a.png
+description: "표적에 가까워지거나 멀어질 때 수신 신호의 위상 변화 속도가 달라진다. 도플러는 그 위상 변화율을 주파수로 읽은 값이며, 거리 함수를 미분하면 직접 구할 수 있다."
 ---
 
 ## 한 줄 요약

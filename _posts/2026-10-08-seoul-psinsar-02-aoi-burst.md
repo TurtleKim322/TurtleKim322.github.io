@@ -8,6 +8,7 @@ project_order: 2
 tags: [Sentinel-1, SAR, PS-InSAR]
 author_profile: true
 toc: true
+description: "서울 좌표만 정하면 바로 영상 처리를 시작할 수 있을 것 같았다. 그런데 Sentinel-1 IW SLC 한 장은 사진 한 장처럼 단순하지 않다. IW1, IW2, IW3라는 세 개의 subswath(관측 띠)로 나뉘고, 각 띠 안에는 짧은 구간의 영상인 burst가 이어져 있다. 관심 지역이 어느 띠와 burst에 들어가는지 알아야 불필요한 자료를 줄이고, 날짜가 다른 영상에서도 같은 범위"
 ---
 
 서울 좌표만 정하면 바로 영상 처리를 시작할 수 있을 것 같았다. 그런데 Sentinel-1 IW SLC 한 장은 사진 한 장처럼 단순하지 않다. IW1, IW2, IW3라는 세 개의 subswath(관측 띠)로 나뉘고, 각 띠 안에는 짧은 구간의 영상인 burst가 이어져 있다. 관심 지역이 어느 띠와 burst에 들어가는지 알아야 불필요한 자료를 줄이고, 날짜가 다른 영상에서도 같은 범위를 비교할 수 있다.

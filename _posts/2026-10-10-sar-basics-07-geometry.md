@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/07_a.png
+description: "플랫폼이 직선을 따라 이동하면 고정 표적까지의 거리는 어떻게 변할까? 피타고라스 정리로 거리 함수를 만들고, 빔 안에서 표적이 보이는 구간을 기하적으로 계산한다."
 ---
 
 ## 한 줄 요약

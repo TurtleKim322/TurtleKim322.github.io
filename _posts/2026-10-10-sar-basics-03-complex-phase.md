@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/03_a.png
+description: "복소수는 계산을 어렵게 만들기 위한 장치가 아니라 진폭과 위상을 함께 보관하는 방법이다. 회전 벡터와 파형을 연결하고, SAR에서 절댓값을 너무 일찍 취하면 왜 집속할 수 없는지 살펴본다."
 ---
 
 ## 한 줄 요약

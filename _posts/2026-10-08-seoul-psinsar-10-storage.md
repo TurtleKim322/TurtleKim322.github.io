@@ -8,6 +8,7 @@ project_order: 8
 tags: [PS-InSAR, WSL2, 데이터 관리]
 author_profile: true
 toc: true
+description: "Step 2를 돌리던 중 Octave에서 Input/output error와 Bus error가 나오기 시작했다. 처음에는 계산 문제라고 생각했다. 그런데 WSL 안에서 df -h를 확인했을 때는 공간이 충분해 보였다. 이상해서 Windows C: 드라이브의 여유 공간을 따로 봤고, 그쪽이 거의 바닥난 상태라는 걸 알게 됐다."
 ---
 
 Step 2를 돌리던 중 Octave에서 `Input/output error`와 `Bus error`가 나오기 시작했다. 처음에는 계산 문제라고 생각했다. 그런데 WSL 안에서 `df -h`를 확인했을 때는 공간이 충분해 보였다. 이상해서 Windows C: 드라이브의 여유 공간을 따로 봤고, 그쪽이 거의 바닥난 상태라는 걸 알게 됐다.

@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/20_a.png
+description: "SAR 수학을 공부할 때 모든 분야를 처음부터 끝까지 끝내고 코드를 읽을 필요는 없다. 코드에서 실제로 쓰는 연산을 기준으로 선행 지식을 연결하고, 각 단계마다 손으로 확인할 작은 과제를 정한다."
 ---
 
 ## 한 줄 요약

@@ -8,6 +8,7 @@ project_order: 4
 tags: [Sentinel-1, InSAR, PS-InSAR, StaMPS]
 author_profile: true
 toc: true
+description: "앞의 글들은 두 SAR 영상을 같은 위치끼리 비교할 수 있도록 준비하는 과정이었다. 여기서부터 두 시기의 위상 차, 즉 interferogram(간섭 위상)을 실제로 살펴본다. 다만 아래 그림은 침하 지도가 아니다. 먼저 그림에서 무엇을 보고 무엇은 아직 판단하면 안 되는지 구분해 보자."
 ---
 
 앞의 글들은 두 SAR 영상을 같은 위치끼리 비교할 수 있도록 준비하는 과정이었다. 여기서부터 두 시기의 위상 차, 즉 interferogram(간섭 위상)을 실제로 살펴본다. 다만 아래 그림은 침하 지도가 아니다. 먼저 그림에서 무엇을 보고 무엇은 아직 판단하면 안 되는지 구분해 보자.

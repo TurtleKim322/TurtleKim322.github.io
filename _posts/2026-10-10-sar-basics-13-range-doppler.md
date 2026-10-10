@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/13_a.png
+description: "Range-Doppler 영역은 거리축을 유지한 채 방위 시간축만 주파수로 바꾼 표현이다. 이름에 두 개의 단어가 들어간다고 해서 두 축을 모두 FFT한 결과는 아니다."
 ---
 
 ## 한 줄 요약

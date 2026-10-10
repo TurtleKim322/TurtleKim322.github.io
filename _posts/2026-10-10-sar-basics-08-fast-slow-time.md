@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/08_a.png
+description: "SAR 데이터에는 서로 다른 의미의 시간축이 두 개 있다. 한 펄스 안의 수신 시각을 fast time, 여러 펄스가 반복되는 관측 시간을 slow time이라 하며, 둘은 배열의 행과 열로 구분된다."
 ---
 
 ## 한 줄 요약

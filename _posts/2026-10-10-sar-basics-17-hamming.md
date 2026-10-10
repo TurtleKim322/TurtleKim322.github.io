@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/17_a.png
+description: "Hamming 창은 유한한 기준 신호의 양 끝을 완만하게 줄이는 가중치다. 부엽을 낮추는 이점과 주엽이 넓어지는 대가를 비교하고, 창을 사용한 영상의 해상도를 어떻게 읽어야 하는지 알아본다."
 ---
 
 ## 한 줄 요약

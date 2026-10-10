@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/12_a.png
+description: "FFT는 표본 신호의 DFT를 빠르게 계산하는 알고리즘이다. 시간 신호를 주파수 성분으로 읽는 방법, bin 간격, 배열의 주파수 순서를 함께 알아본다."
 ---
 
 ## 한 줄 요약

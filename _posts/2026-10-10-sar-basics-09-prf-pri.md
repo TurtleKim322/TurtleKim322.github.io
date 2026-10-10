@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/09_a.png
+description: "PRF는 1초에 보내는 펄스 수, PRI는 펄스 사이의 시간이다. 반복 송신이 플랫폼 이동의 표본 간격을 어떻게 결정하는지 계산하고, 펄스 폭과 반복 주기를 구별한다."
 ---
 
 ## 한 줄 요약

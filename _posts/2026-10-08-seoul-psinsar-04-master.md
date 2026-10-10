@@ -8,6 +8,7 @@ project_order: 3
 tags: [Sentinel-1, InSAR, PS-InSAR]
 author_profile: true
 toc: true
+description: "날짜가 다른 SAR 영상을 나란히 비교하려면 먼저 한 장을 기준으로 정해야 한다. 그 영상을 master, 나머지 영상을 secondary라고 부른다. 모든 secondary는 master와 같은 지상 위치가 겹치도록 정합한다. 이 프로젝트에서 기록된 master는 2022년 7월 16일 영상이다."
 ---
 
 날짜가 다른 SAR 영상을 나란히 비교하려면 먼저 한 장을 기준으로 정해야 한다. 그 영상을 master, 나머지 영상을 secondary라고 부른다. 모든 secondary는 master와 같은 지상 위치가 겹치도록 정합한다. 이 프로젝트에서 기록된 master는 **2022년 7월 16일** 영상이다.

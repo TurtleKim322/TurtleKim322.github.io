@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/11_a.png
+description: "거리 압축은 수신 chirp와 기준 chirp의 모양이 잘 맞는 지연을 찾는 처리다. 복소수 상관을 정합 필터로 표현하고, FFT 곱셈이 같은 계산을 효율적으로 수행하는 이유를 살펴본다."
 ---
 
 ## 한 줄 요약

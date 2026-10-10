@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/15_a.png
+description: "거리의 변화는 느린 시간에 대해 거의 이차적인 위상을 만든다. 이것이 방위 chirp이며, 그 위상 이력에 맞는 기준 신호와 상관하면 여러 펄스에 퍼진 표적이 한 위치로 모인다."
 ---
 
 ## 한 줄 요약

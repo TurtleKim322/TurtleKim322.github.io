@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/14_a.png
+description: "한 표적까지의 거리는 플랫폼 이동에 따라 변하므로 표적 응답이 여러 거리 셀을 지나간다. RCMC는 도플러별로 입력 거리 위치를 다시 읽어, 같은 최단 거리의 응답으로 정렬하는 단계다."
 ---
 
 ## 한 줄 요약

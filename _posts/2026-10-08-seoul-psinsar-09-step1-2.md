@@ -8,6 +8,7 @@ project_order: 7
 tags: [PS-InSAR, StaMPS]
 author_profile: true
 toc: true
+description: "후보점을 뽑았다고 바로 움직임을 읽을 수 있는 것은 아니다. StaMPS는 먼저 여러 시기의 위상 이력을 이용해 후보별 gamma를 추정한다. 그 다음 단계에서 coherence 기준과 다른 조건을 사용해 점을 선택한다. 용어가 비슷해 보이지만, 어느 Step의 어느 변수인지 확인해야 혼동하지 않는다."
 ---
 
 후보점을 뽑았다고 바로 움직임을 읽을 수 있는 것은 아니다. StaMPS는 먼저 여러 시기의 위상 이력을 이용해 후보별 gamma를 추정한다. 그 다음 단계에서 coherence 기준과 다른 조건을 사용해 점을 선택한다. 용어가 비슷해 보이지만, 어느 Step의 어느 변수인지 확인해야 혼동하지 않는다.

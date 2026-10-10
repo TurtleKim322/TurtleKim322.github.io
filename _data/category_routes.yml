@@ -1,0 +1,42 @@
+- name: SAR
+  slug: sar-basics
+  url: /categories/sar-basics/
+- name: 보안
+  slug: security
+  url: /categories/security/
+- name: 취미
+  slug: hobby
+  url: /categories/hobby/
+- name: 개인 프로젝트
+  slug: personal-project
+  url: /categories/personal-project/
+- name: 서울 PS-InSAR
+  slug: seoul-psinsar
+  url: /categories/seoul-psinsar/
+- name: 나의 취미
+  slug: my-hobby
+  url: /categories/my-hobby/
+- name: 프로그래밍
+  slug: programming
+  url: /categories/programming/
+- name: 알고리즘
+  slug: algorithm
+  url: /categories/algorithm/
+- name: 신호처리
+  slug: signal-processing
+  url: /categories/signal-processing/
+- name: 양자 컴퓨터 프로그래밍
+  slug: quantum-computing
+  url: /categories/quantum-computing/
+- name: 도전과제
+  slug: challenge
+  url: /categories/challenge/
+- name: 논문 리뷰
+  slug: paper-review
+  url: /categories/paper-review/
+- name: 수학
+  slug: math
+  url: /categories/math/
+- name: 위성
+  slug: satellite
+  url: /categories/satellite/

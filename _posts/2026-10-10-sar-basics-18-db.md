@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/18_a.png
+description: "SAR 영상의 진폭은 강한 응답과 약한 응답의 차이가 커서 선형 색상으로 보기 어렵다. dB는 비율을 로그로 바꾸는 표시 방법이며, 정규화와 표시 하한이 무엇을 바꾸는지 알아야 그림을 정확히 읽을 수 있다."
 ---
 
 ## 한 줄 요약

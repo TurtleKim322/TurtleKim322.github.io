@@ -13,6 +13,7 @@ math: true
 excerpt: "왕복 거리와 복소수 위상에서 출발해 chirp, 정합 필터, 도플러, 거리 이동 보정과 방위 압축을 연결한다."
 header:
   teaser: /assets/images/sar-python/04-migration-and-doppler.png
+description: "왕복 거리와 복소수 위상에서 출발해 chirp, 정합 필터, 도플러, 거리 이동 보정과 방위 압축을 연결한다."
 ---
 
 [첫 번째 글](/sar-python/01-simulation/)에서 가상 점 표적을 SAR 영상으로 만들었다. 이번에는 처리 순서에 숨어 있는 수학을 정리한다. 목표는 공식을 외우기보다 **거리가 바뀌면 시간이 바뀌고, 위상이 바뀌며, 그 변화에 맞춰 신호를 더하면 표적이 모인다**는 연결을 이해하는 것이다.

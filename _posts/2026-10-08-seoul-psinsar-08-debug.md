@@ -8,6 +8,7 @@ project_order: 6
 tags: [PS-InSAR, StaMPS, GNU Octave]
 author_profile: true
 toc: true
+description: "StaMPS를 돌리면서 오류가 하나만 생긴 것은 아니었다. 진폭 계산, 자료의 byte order, 파라미터, Octave 함수가 서로 다른 시점에 문제를 일으켰다. 처음에는 오류 메시지부터 없애면 된다고 생각했지만, 로그와 입력 파일을 한 단계씩 맞춰 보지 않으면 잘못된 값으로 계산이 계속될 수도 있었다."
 ---
 
 StaMPS를 돌리면서 오류가 하나만 생긴 것은 아니었다. 진폭 계산, 자료의 byte order, 파라미터, Octave 함수가 서로 다른 시점에 문제를 일으켰다. 처음에는 오류 메시지부터 없애면 된다고 생각했지만, 로그와 입력 파일을 한 단계씩 맞춰 보지 않으면 잘못된 값으로 계산이 계속될 수도 있었다.

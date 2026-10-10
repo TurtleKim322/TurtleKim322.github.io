@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/16_a.png
+description: "SAR focusing은 하나의 필터 이름이 아니라 원시 복소수 신호를 거리와 방위 위치에 모으는 전체 과정이다. 각 단계가 어떤 정보를 바꾸고 무엇을 보존하는지 따라가며 처리 순서를 정리한다."
 ---
 
 ## 한 줄 요약

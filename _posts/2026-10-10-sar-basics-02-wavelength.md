@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/02_a.png
+description: "주파수는 1초에 몇 번 진동하는지, 파장은 공간에서 한 주기가 얼마나 긴지를 뜻한다. 같은 전파 속도에서 주파수가 높아질수록 파장은 짧아진다는 관계를 SAR 위상과 연결한다."
 ---
 
 ## 한 줄 요약

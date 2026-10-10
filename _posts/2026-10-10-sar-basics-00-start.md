@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/00_a.png
+description: "SAR는 여러 위치에서 받은 반사 신호를 모아 영상을 만드는 레이더다. 이 시리즈는 점 표적 시뮬레이터를 길잡이로 삼아, 거리 측정부터 복소수 위상과 영상 집속까지 한 번에 한 개념씩 공부한다."
 ---
 
 ## 한 줄 요약

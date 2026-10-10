@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/19_a.png
+description: "배열 뒤에 0을 붙여 FFT 길이를 늘리면 주파수 격자는 촘촘해진다. 하지만 실제 관측 시간이나 신호 대역폭이 늘지는 않는다. 시간 영역 0 채우기와 주파수 영역 0 채우기의 차이도 함께 구별한다."
 ---
 
 ## 한 줄 요약

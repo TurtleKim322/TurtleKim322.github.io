@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/01_a.png
+description: "레이더의 가장 기본적인 거리 정보는 신호가 돌아오는 데 걸린 시간이다. 왕복 시간과 편도 거리를 연결하는 식에서 출발해, 코드의 시간 지연과 배열 위치가 어떤 뜻인지 알아본다."
 ---
 
 ## 한 줄 요약

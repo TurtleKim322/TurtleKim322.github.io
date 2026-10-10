@@ -13,6 +13,7 @@ toc_sticky: true
 math: true
 header:
   teaser: /assets/img/sar-basics/21_a.png
+description: "마지막으로 원본 코드의 입력부터 출력까지 다시 연결한다. 처리 공식뿐 아니라 배열 크기, 범위 선택, 좌표 원점, 검증 범위를 함께 살펴보며 어떤 결과를 확인했고 무엇은 아직 확인하지 않았는지 정리한다."
 ---
 
 ## 한 줄 요약
