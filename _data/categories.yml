@@ -1,4 +1,7 @@
 categories:
+  - name: "SAR"
+    slug: sar-basics
+    url: /sar-basics/series/
   - name: "보안"
     slug: security
   - name: "취미"
