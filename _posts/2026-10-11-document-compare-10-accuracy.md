@@ -1,6 +1,6 @@
 ---
 title: "문서 비교 프로그램 #10 - 비교 정확도와 성능 최적화 방향"
-date: 2026-10-11
+date: 2026-10-11 00:00:00 +0900
 permalink: /document-compare/10-accuracy/
 categories: [취미, 개인 프로젝트, 문서 비교 프로그램]
 project: document-compare

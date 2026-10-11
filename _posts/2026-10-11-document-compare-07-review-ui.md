@@ -1,6 +1,6 @@
 ---
 title: "문서 비교 프로그램 #7 - Drag & Drop과 문서 검토 UI 개선"
-date: 2026-10-11
+date: 2026-10-11 00:00:00 +0900
 permalink: /document-compare/07-review-ui/
 categories: [취미, 개인 프로젝트, 문서 비교 프로그램]
 project: document-compare

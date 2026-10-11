@@ -1,6 +1,6 @@
 ---
 title: "문서 비교 프로그램 #9 - Page View가 느린 문제를 해결하기"
-date: 2026-10-11
+date: 2026-10-11 00:00:00 +0900
 permalink: /document-compare/09-page-performance/
 categories: [취미, 개인 프로젝트, 문서 비교 프로그램]
 project: document-compare
