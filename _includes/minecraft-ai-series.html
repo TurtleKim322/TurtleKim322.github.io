@@ -1,0 +1,10 @@
+<aside class="notice--info" aria-label="Minecraft AI 기획 연재">
+  <p><strong>Minecraft AI 기획 연재</strong> · 환경 구축 전, 모든 개발 단계는 예정입니다.</p>
+  <ol>
+    {% assign series_posts = site.categories['마인크래프트 AI'] | where: 'project', 'minecraft-ai' | sort: 'project_order' %}
+    {% for series_post in series_posts %}
+    <li>{% if series_post.url == page.url %}<strong aria-current="page">{{ series_post.title | escape }}</strong>{% else %}<a href="{{ series_post.url | relative_url }}">{{ series_post.title | escape }}</a>{% endif %}</li>
+    {% endfor %}
+  </ol>
+  <p><a href="{{ '/categories/minecraft-ai/' | relative_url }}">마인크래프트 AI 전체 글</a> · <a href="{{ '/categories/personal-project/' | relative_url }}">개인 프로젝트</a></p>
+</aside>

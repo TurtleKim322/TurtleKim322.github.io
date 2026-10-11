@@ -46,3 +46,6 @@
 - name: 문서 비교 프로그램
   slug: document-compare
   url: /categories/document-compare/
+- name: 마인크래프트 AI
+  slug: minecraft-ai
+  url: /categories/minecraft-ai/

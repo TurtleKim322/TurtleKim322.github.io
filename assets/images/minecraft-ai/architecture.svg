@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="880" viewBox="0 0 560 880" role="img" aria-labelledby="title desc">
+  <title id="title">Minecraft AI 아키텍처 설계 초안</title>
+  <desc id="desc">Minecraft와 어댑터, 정책은 관측과 행동을 주고받는다. 경험 수집 버퍼에서 학습기로 데이터를 보내고 학습기가 정책을 갱신한다. 상위 목표 선택은 후속 단계다.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8Z" fill="#406679"/></marker></defs>
+  <rect width="560" height="880" rx="18" fill="#f5f8fa"/>
+  <g font-family="sans-serif" text-anchor="middle" fill="#243844">
+    <text x="280" y="40" font-size="23" font-weight="700">Minecraft AI · 설계 초안</text>
+    <text x="280" y="70" font-size="17">모든 구성 요소는 구현 예정</text>
+    <g stroke="#71909c" stroke-width="2" fill="#fff">
+      <rect x="80" y="100" width="400" height="75" rx="12"/>
+      <rect x="80" y="230" width="400" height="95" rx="12"/>
+      <rect x="80" y="390" width="400" height="80" rx="12"/>
+      <rect x="80" y="530" width="400" height="75" rx="12"/>
+      <rect x="80" y="665" width="400" height="75" rx="12"/>
+      <rect x="80" y="795" width="400" height="55" rx="12" stroke-dasharray="6 4"/>
+    </g>
+    <g font-size="21" font-weight="700">
+      <text x="280" y="145">Minecraft 환경</text>
+      <text x="280" y="264">환경 어댑터</text>
+      <text x="280" y="422">정책 · Policy</text>
+      <text x="280" y="575">경험 수집 · Rollout</text>
+      <text x="280" y="709">학습기 · PPO 후보</text>
+      <text x="280" y="830">상위 목표 선택 · 후속 검토</text>
+    </g>
+    <g font-size="17">
+      <text x="280" y="295">초기화 · 관측 · 행동 · 보상 · 종료</text>
+      <text x="280" y="450">관측에서 다음 행동을 선택</text>
+      <text x="280" y="209">게임 상태 ↓ / 제어 명령 ↑</text>
+      <text x="280" y="362">관측 ↓ / 선택한 행동 ↑</text>
+      <text x="280" y="510">어댑터의 전이 + 정책 출력</text>
+      <text x="280" y="645">최근 경험으로 학습</text>
+      <text x="280" y="775">정책 갱신은 왼쪽 경로로 반영</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#406679" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M110 181V224" marker-start="url(#arrow)"/>
+    <path d="M110 331V384" marker-start="url(#arrow)"/>
+    <path d="M110 476V524"/>
+    <path d="M110 611V659"/>
+    <path d="M80 703H35V430H74"/>
+  </g>
+</svg>
