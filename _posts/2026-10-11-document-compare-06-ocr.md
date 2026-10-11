@@ -1,6 +1,6 @@
 ---
 title: "문서 비교 프로그램 #6 - OCR로 스캔 PDF 비교하기"
-date: 2026-10-11 00:00:00 +0900
+date: 2026-10-11 11:05:15 +0900
 permalink: /document-compare/06-ocr/
 categories: [취미, 개인 프로젝트, 문서 비교 프로그램]
 project: document-compare
